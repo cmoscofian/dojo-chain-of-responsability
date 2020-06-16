@@ -3,11 +3,11 @@ package com.mercadolibre.dojos.usecases;
 import com.mercadolibre.dojos.handlers.BaseHandler;
 import java.net.HttpURLConnection;
 
-public class UCConflict extends BaseHandler {
+public class BadRequest extends BaseHandler {
     @Override
     public String handle(int statusCode) {
-        if (statusCode == HttpURLConnection.HTTP_CONFLICT) {
-            return "HttpURLConnection.HTTP_CONFLICT found.";
+        if (statusCode == HttpURLConnection.HTTP_BAD_REQUEST) {
+            return "HttpURLConnection.HTTP_BAD_REQUEST found.";
         }
         
         return super.handle(statusCode);

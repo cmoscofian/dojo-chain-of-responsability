@@ -3,7 +3,7 @@ package com.mercadolibre.dojos.usecases;
 import com.mercadolibre.dojos.handlers.BaseHandler;
 import java.net.HttpURLConnection;
 
-public class UCInternalError extends BaseHandler {
+public class InternalError extends BaseHandler {
     @Override
     public String handle(int statusCode) {
         if (statusCode == HttpURLConnection.HTTP_INTERNAL_ERROR) {
